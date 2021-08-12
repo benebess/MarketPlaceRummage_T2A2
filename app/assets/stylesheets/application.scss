@@ -44,9 +44,29 @@ a.navbar-brand {
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    color: #191d25;
+}
+
+#flash_notice {
     color: #e06c75;
 }
 
-label {
-    color: #e06c75;
+.item-show-container {
+    background: #e06c75;
+}
+
+.item-edit-container {
+    background: #e06c75;
+}
+
+.item-index-container {
+    background: #e06c75;
+}
+
+.item-form-container {
+    background: #e06c75;
+}
+
+.item-new-container {
+    background: #e06c75;
 }
