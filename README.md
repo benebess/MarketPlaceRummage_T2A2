@@ -6,6 +6,23 @@ By Benedicte Powell
 
 ![](/docs/RUMMAGE.png)
 
+# AUTHENTICATION DETAILS
+
+## ADMIN LOGIN -
+email: jack@example.com 
+password: aaaaaaaa
+
+## SELLER LOGIN - 
+email: sue@example.com
+password: aaaaaaaa
+email: kev@example.com
+password: aaaaaaaa
+
+## REGULAR LOGIN - 
+email: sally@example.com
+password: aaaaaaaa
+
+
 # Marketplace idea and problem it solves, and why it needs solving:
 
 For my Markerplace app I am creating an online suitcase rummage of sorts, a used/vintage clothing market. I have chosen this as an idea for my Marketplace project as we are now living in a place where it is not uncommon to be locked down for extended periods of time - a lot of people rely on markets & rummages to make extra money, this is where my app would come in as an aid or replacement to the market scene. People could either soley use the application or a mixture of both the application and market stalls where it allows. Another reason this is helpful is because generally markets are only once a week, or even less for rummages which usually occur monthly - this application would allow a user to continue selling every day of the week, every week! This will also help the people who chose to buy at markets & rummages, by creating a place where even during lockdowns or quarantine isolations, they are still able to buy second hand and vintage clothing. 
