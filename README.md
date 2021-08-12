@@ -9,18 +9,25 @@ By Benedicte Powell
 # AUTHENTICATION DETAILS
 
 ## ADMIN LOGIN -
-email: jack@example.com 
-password: aaaaaaaa
+• email: jack@example.com 
+• password: aaaaaaaa
 
 ## SELLER LOGIN - 
-email: sue@example.com
-password: aaaaaaaa
-email: kev@example.com
-password: aaaaaaaa
+• email: sue@example.com
+• password: aaaaaaaa
+• email: kev@example.com
+• password: aaaaaaaa
 
 ## REGULAR LOGIN - 
-email: sally@example.com
-password: aaaaaaaa
+• email: sally@example.com
+• password: aaaaaaaa
+
+# Creator notes
+
+After restarting my app for the 5th time due to many many errors & issues revolving around my lack of rails knowledge there are some part of my application that are no usable currently. 
+Edit profiles will be added at a later date as well as a view page with pictures for the items page. 
+Having restarted so many times I can confidently say I am well versed in the beginnings of making a rails application and look forward to fixing the issues within my app for future use. 
+As I was pushed for time I have not used cloud image uploading and am still using active storage. This will be amended in the future as well. 
 
 
 # Marketplace idea and problem it solves, and why it needs solving:
@@ -43,30 +50,36 @@ As we all know, the pandemic has effected individuals all over the world.
 Uncertainties such as whether we might go into a lockdown, or have visited a hotspot and need to quarantine, have resulted in a lot of lossed income for a lot of people. I also wanted to support those individuals who prefer to shop at markets or rummages rather then supporting fast fashion. 
 Rummage aims to aid those individuals, be they sellers or buyers, in an easy to use interface that allows them to reduce, reuse and recycle! 
 
-Functionality:
+## Functionality/Features:
 
+Home Page prompts respective users to either login if they have an existing account or sign up. 
+Home page features a title, a landing image & a brief description of the application. There is a button to add an item if you are a user or admin (currently still shows for regular users but authorization will not allow them to create an item - this will be hidden to regular users in the future and be replaced by a view items button)
 
+Add item page lets Sellers & Admin create/edit a new item. 
+Or if they are the creator of an item, or an admin they are also able to destroy. These buttons are hidden for regular users. 
+
+Admin users have the added functionality of being able to edit user roles, destroy users and be general badasses. 
 
 
 # Tech stack (e.g. html, css, deployment platform, etc):
 
 **HTML5** is used to create the framework of my project. 
 
-SCSS is used to style elements of my project. 
+**CSS** is used to style elements of my project. 
 
-GitHub is used to manage version control in my project. 
+**GitHub** is used to manage version control in my project. 
 
-Trello is used to track and manage tasks within my project following agile methodology.
+**Trello** is used to track and manage tasks within my project following agile methodology.
 
-Heroku is used to deploy my project to the world wide web. 
+**Heroku** is used to deploy my project to the world wide web. 
 
-Bootstrap is used to style the contents of my project. 
+**Bootstrap** is used to style the contents of my project. 
 
 --
 
-TO BE ADDED IN FUTURE: 
+PLEASE NOTE : TO BE ADDED IN FUTURE - 
 
-Stripe will be used to implement safe payment method.
+**Stripe** will be used to implement safe payment method.
 
 # Target audience:
 
@@ -137,6 +150,8 @@ This is my initial ERD.
 ![marketplace erd (1)](/docs/marketplace erd (1).png)
 
 This is my final ERD. 
+
+
 
 # Explain the different high-level components (abstractions) in your app:
 
