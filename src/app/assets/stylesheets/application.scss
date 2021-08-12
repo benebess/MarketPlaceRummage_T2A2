@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap';
+
+body {
+    background: #191d25;
+}
+
+.jumbotron {
+    background: #e06c75;
+    border-radius: 5%;
+    margin-bottom: 100px;
+    margin-top: 1px;
+}
+
+a {
+    color: #98c379;
+}
+
+a:hover {
+    color: #191d25;
+}
+
+a.navbar-brand {
+    color: #e06c75;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #191d25;
+}
+
+#flash_notice {
+    color: #e06c75;
+}
+
+.item-show-container {
+    background: #e06c75;
+}
+
+.item-edit-container {
+    background: #e06c75;
+}
+
+.item-index-container {
+    background: #e06c75;
+}
+
+.item-form-container {
+    background: #e06c75;
+}
+
+.item-new-container {
+    background: #e06c75;
+}
+
+.footer-copyright.text-center.py-3 {
+    color: #e06c75;
+}
+
+.user-form-container {
+    background: #e06c75;
+}
+
+.edit-user-container {
+    background: #e06c75;
+}
+
+.new-user-container {
+    background: #e06c75;
+}
+
+.user-index-container {
+    background: #e06c75;
+}
+
+.user-show-container {
+    background: #e06c75;
+}
+
+.edit-container {
+    background: #e06c75
+}
+
+.signup-container {
+    background: #e06c75;
+}
+
+.login-container {
+    background: #e06c75;
+}
