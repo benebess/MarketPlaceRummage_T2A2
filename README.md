@@ -151,7 +151,7 @@ This is my initial ERD.
 
 This is my final ERD. 
 
-
+![marketplace erd (2)](/docs/marketplace erd (2).png)
 
 # Explain the different high-level components (abstractions) in your app:
 
@@ -173,22 +173,20 @@ Amazon for cloud storage
 Within my project I have the following models: 
 
 User Model - 
-This model contains the following data: user email and user password, respectively as a string & encrypted string.
+This model contains the following data: name, user email and user password, respectively as a string & encrypted string.
 
-Profile Model - 
-This model contrains a little extra data about our user including: first name, last name, a description for a bio and it has a relation with the user model. 
-Their relationship is one to one, one user has one profile and profile belongs to user. 
+Role Model - 
+This model contains the data for what role the user will have, be it: Admin, Seller, Regular. 
 
-Product Model - 
+Item Model - 
 This model holds the data pertaining to products that users will upload, it's attributes include: title, description and price. 
 This model relates to a user in a one to many relationship. One user can have many products. It also relates to the category model in that one product has one category. 
 
 Category Model - 
 The categories model attributes are simply a name, and belong to a product. 
 
-Order Model- 
-
-Active_Storage_Attachments - 
+Active_Storage_Attachments -
+This model contains the data for image upload
 
 Active_Storage_blobs - 
 
@@ -206,7 +204,81 @@ Orders can have many Products
 
 # Provide your database schema design:
 
+ ``` ruby
+ ActiveRecord::Schema.define(version: 2021_08_12_005846) do
  
+   # These are extensions that must be enabled in order to support this database
+   enable_extension "plpgsql"
+ 
+   create_table "active_storage_attachments", force: :cascade do |t|
+     t.string "name", null: false
+     t.string "record_type", null: false
+     t.bigint "record_id", null: false
+     t.bigint "blob_id", null: false
+     t.datetime "created_at", null: false
+     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+   end
+ 
+   create_table "active_storage_blobs", force: :cascade do |t|
+     t.string "key", null: false
+     t.string "filename", null: false
+     t.string "content_type"
+     t.text "metadata"
+     t.bigint "byte_size", null: false
+     t.string "checksum", null: false
+     t.datetime "created_at", null: false
+     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+   end
+ 
+   create_table "categories", force: :cascade do |t|
+     t.bigint "item_id", null: false
+     t.datetime "created_at", precision: 6, null: false
+     t.datetime "updated_at", precision: 6, null: false
+     t.string "name"
+     t.index ["item_id"], name: "index_categories_on_item_id"
+   end
+ 
+   create_table "items", force: :cascade do |t|
+     t.string "name"
+     t.text "description"
+     t.decimal "price", precision: 5, scale: 2
+     t.bigint "user_id", null: false
+     t.datetime "created_at", precision: 6, null: false
+     t.datetime "updated_at", precision: 6, null: false
+     t.index ["user_id"], name: "index_items_on_user_id"
+   end
+ 
+   create_table "roles", force: :cascade do |t|
+     t.string "name"
+     t.string "description"
+     t.datetime "created_at", precision: 6, null: false
+     t.datetime "updated_at", precision: 6, null: false
+   end
+ 
+   create_table "users", force: :cascade do |t|
+     t.string "name"
+     t.bigint "role_id", null: false
+     t.datetime "created_at", precision: 6, null: false
+     t.datetime "updated_at", precision: 6, null: false
+     t.string "email", default: "", null: false
+     t.string "encrypted_password", default: "", null: false
+     t.string "reset_password_token"
+     t.datetime "reset_password_sent_at"
+     t.datetime "remember_created_at"
+     t.index ["email"], name: "index_users_on_email", unique: true
+     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+     t.index ["role_id"], name: "index_users_on_role_id"
+   end
+ 
+   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+   add_foreign_key "categories", "items"
+   add_foreign_key "items", "users"
+   add_foreign_key "users", "roles"
+ end
+ ```
+
+
 
 # Describe the way tasks are allocated and tracked in your project:
 
@@ -238,28 +310,3 @@ I will be using Trello to track and allocate tasks throughout my project.
 ![TRELLOBOARD9](/docs/TRELLOBOARD9.png)
 
 
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-# MarketPlaceRummage_T2A2
