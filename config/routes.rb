@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'products/page'
   root to: 'home#index'
   devise_for :users
   scope '/admin' do
