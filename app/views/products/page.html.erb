@@ -1,6 +1,10 @@
 <% @items.each do |item| %>
     <div class="card" style="width: 18rem;">
-        <%= image_tag item.picture, class: "Card-image-cap" %>
+        <% if @item.picture.attached? %>
+            <%= image_tag @item.picture, class: "card-img top thumbnail" %>
+        <% else %>
+            <%= image_tag "landingimage", alt: "landing image", class: "card-img top thumbnail" %>
+        <% end %>
         <div class="card-body">
             <h5 class="card-title"><% item.name %></h5>
             <p class="card-text"><% item.description %></p>
