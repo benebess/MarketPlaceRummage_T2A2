@@ -160,7 +160,12 @@ This is my final ERD.
 
 # Detail any third party services that your app will use:
 
-Stripe
+Heroku for deployment 
+
+## FUTURE:
+
+Stripe for payment
+Amazon for cloud storage
 
 
 # Describe your projects models in terms of the relationships (active record associations) they have with each other:
