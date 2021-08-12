@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
+    
   end
 
   # GET /items/1/edit
@@ -46,7 +47,7 @@ class ItemsController < ApplicationController
   end
 
   private
-  
+
     # Only allow a trusted parameter "white list" through.
     def item_params
       params.require(:item).permit(:name, :description, :price, :user_id)
