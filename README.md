@@ -101,7 +101,7 @@ I aimed to create an online marketplace where people who sell used & vintage clo
 
 # Sitemap:
 
-
+![RummageSCREENSHOTS0](/docs/SiteMapRummage.png)
 
 # User Stories:
 
