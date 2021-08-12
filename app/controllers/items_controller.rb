@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource
+  before_action :setup_form, only: [ :new, :edit ]
+
 
   # GET /items
   def index
@@ -13,7 +15,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    
+
   end
 
   # GET /items/1/edit
@@ -47,6 +49,10 @@ class ItemsController < ApplicationController
   end
 
   private
+
+    def setup_form
+      @categories = Category.all
+    end
 
     # Only allow a trusted parameter "white list" through.
     def item_params
